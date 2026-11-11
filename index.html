@@ -1,194 +1,733 @@
 
-<div id="nightfall">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700;800&display=swap');
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090711">
+  <title>NIGHTFALL ROLEPLAY | FiveM</title>
+  <meta name="description" content="NIGHTFALL ROLEPLAY — dołącz do naszej społeczności FiveM i rozpocznij swoją historię.">
 
-#nightfall {
-  --purple:#a855f7;
-  --bright:#c084fc;
-  --bg:#09070e;
-  color:#fff;
-  background:#09070e;
-  font-family:Inter,sans-serif;
-  width:100%;
-  overflow:hidden;
-}
-#nightfall * {box-sizing:border-box}
-#nightfall a {color:inherit;text-decoration:none}
-#nightfall .nav {
-  display:flex;align-items:center;justify-content:space-between;
-  padding:22px 7%;background:#0b0812;
-  border-bottom:1px solid #382047;
-  flex-wrap:wrap;gap:15px;
-}
-#nightfall .logo {
-  font-family:Orbitron,sans-serif;font-weight:900;
-  font-size:20px;color:#c084fc;letter-spacing:2px;
-}
-#nightfall .links {display:flex;gap:25px;flex-wrap:wrap;font-size:13px;color:#c8bed2}
-#nightfall .links a:hover {color:#c084fc}
-#nightfall .hero {
-  min-height:610px;display:flex;flex-direction:column;
-  justify-content:center;align-items:center;text-align:center;
-  padding:90px 20px;
-  background:
-  radial-gradient(ellipse at 50% 70%,#7024a955,transparent 55%),
-  linear-gradient(180deg,#100a19,#09070e);
-  position:relative;
-}
-#nightfall .tag {
-  border:1px solid #a855f766;color:#d8b4fe;
-  padding:9px 18px;border-radius:30px;
-  font-size:11px;letter-spacing:3px;
-}
-#nightfall h1 {
-  font-family:Orbitron,sans-serif;
-  font-size:clamp(38px,8vw,85px);
-  line-height:1.12;margin:25px 0 15px;
-  letter-spacing:-3px;
-  text-shadow:0 0 35px #a855f777;
-}
-#nightfall h1 span {color:#bd75ff}
-#nightfall .intro {color:#b9adca;max-width:580px;line-height:1.8;font-size:15px}
-#nightfall .buttons {display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;justify-content:center}
-#nightfall .btn {
-  padding:16px 27px;border-radius:5px;
-  background:#a855f7;color:white;font-weight:800;
-  font-size:12px;letter-spacing:1px;
-  box-shadow:0 0 25px #a855f744;
-  display:inline-block;
-}
-#nightfall .btn.secondary {background:transparent;border:1px solid #a855f7}
-#nightfall .section {padding:85px 8%;text-align:center}
-#nightfall .eyebrow {color:#b76cff;font-size:11px;letter-spacing:4px;font-weight:800}
-#nightfall h2 {font-family:Orbitron,sans-serif;font-size:clamp(25px,4vw,38px);margin:15px 0}
-#nightfall .description {color:#a99db5;max-width:650px;margin:0 auto;line-height:1.8}
-#nightfall .cards {
- display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
- gap:18px;margin-top:40px;text-align:left;
-}
-#nightfall .card {
- padding:28px;background:linear-gradient(145deg,#1b1125,#100c16);
- border:1px solid #432454;border-radius:9px;
- transition:.25s;
-}
-#nightfall .card:hover {transform:translateY(-5px);border-color:#b66aff}
-#nightfall .icon {font-size:27px;margin-bottom:18px}
-#nightfall .card h3 {font-family:Orbitron,sans-serif;font-size:16px}
-#nightfall .card p {color:#a99db5;font-size:13px;line-height:1.8}
-#nightfall .dark {background:#100b17}
-#nightfall .join {
- margin:30px 8%;padding:65px 20px;text-align:center;
- border:1px solid #7735a5;border-radius:12px;
- background:radial-gradient(ellipse at center,#62239455,#160d20);
-}
-#nightfall footer {
- padding:30px 8%;border-top:1px solid #382047;
- display:flex;justify-content:space-between;gap:15px;
- flex-wrap:wrap;color:#8e8299;font-size:12px;
-}
-#nightfall .muted {color:#998ba8}
-@media(max-width:600px) {
- #nightfall .nav {justify-content:center}
- #nightfall .links {justify-content:center;gap:14px}
- #nightfall .hero {min-height:540px}
- #nightfall .section {padding:65px 6%}
- #nightfall footer {justify-content:center;text-align:center}
-}
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-<nav class="nav">
- <div class="logo">✦ NIGHTFALL RP</div>
- <div class="links">
-  <a href="#home">HOME</a>
-  <a href="#about">O NAS</a>
-  <a href="#features">ROZGRYWKA</a>
-  <a href="#rules">REGULAMIN</a>
-  <a href="#join">DOŁĄCZ</a>
- </div>
-</nav>
+  <style>
+    :root {
+      --bg: #090711;
+      --panel: #141020;
+      --panel2: #1b1529;
+      --purple: #a855f7;
+      --purple2: #7c3aed;
+      --text: #f7f2ff;
+      --muted: #aaa0ba;
+      --border: rgba(168,85,247,.22);
+    }
 
-<header class="hero" id="home">
- <div class="tag">POLSKI SERWER ROLEPLAY</div>
- <h1>YOUR CITY.<br><span>YOUR STORY.</span></h1>
- <p class="intro">
-  Wejdź do świata, w którym każda decyzja ma znaczenie.
-  Stwórz własną historię, poznaj nowych ludzi i zostań częścią
-  wyjątkowej społeczności roleplay.
- </p>
- <div class="buttons">
-  <a class="btn" href="#join">DOŁĄCZ DO NAS</a>
-  <a class="btn secondary" href="https://discord.com/" target="_blank">DISCORD</a>
- </div>
-</header>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-<section class="section" id="about">
- <div class="eyebrow">POZNAJ NAS</div>
- <h2>WIĘCEJ NIŻ GRA</h2>
- <p class="description">
-  NIGHTFALL ROLEPLAY to projekt stworzony z myślą o graczach,
-  którzy cenią dobrą atmosferę, realistyczną rozgrywkę
-  i niezapomniane historie.
- </p>
-</section>
+    html { scroll-behavior: smooth; }
 
-<section class="section dark" id="features">
- <div class="eyebrow">MOŻLIWOŚCI</div>
- <h2>CO NA CIEBIE CZEKA?</h2>
- <div class="cards">
-  <div class="card">
-   <div class="icon">🚔</div>
-   <h3>FRAKCJE</h3>
-   <p>Dołącz do służb publicznych i zadbaj o bezpieczeństwo miasta.</p>
-  </div>
-  <div class="card">
-   <div class="icon">💼</div>
-   <h3>PRACA</h3>
-   <p>Rozwijaj swoją karierę i buduj własną przyszłość.</p>
-  </div>
-  <div class="card">
-   <div class="icon">🏎️</div>
-   <h3>MOTORYZACJA</h3>
-   <p>Odkrywaj świat samochodów i rozwijaj swoje motoryzacyjne pasje.</p>
-  </div>
-  <div class="card">
-   <div class="icon">👥</div>
-   <h3>SPOŁECZNOŚĆ</h3>
-   <p>Poznaj innych graczy i twórz własne historie.</p>
-  </div>
- </div>
-</section>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, sans-serif;
+      line-height: 1.6;
+    }
 
-<section class="section" id="rules">
- <div class="eyebrow">ZASADY ROZGRYWKI</div>
- <h2>FAIR PLAY</h2>
- <p class="description">
-  Szanuj innych graczy, przestrzegaj zasad Roleplay
-  i pamiętaj, że dobra zabawa zaczyna się od wzajemnego szacunku.
- </p>
- <div class="buttons">
-  <a class="btn secondary" href="https://discord.com/">POZNAJ REGULAMIN</a>
- </div>
-</section>
+    a { color: inherit; text-decoration: none; }
 
-<section class="join" id="join">
- <div class="eyebrow">TWOJA HISTORIA ZACZYNA SIĘ TUTAJ</div>
- <h2>DOŁĄCZ DO NIGHTFALL</h2>
- <p class="description">
-  Czekamy na Ciebie. Wejdź na naszego Discorda
-  i poznaj naszą społeczność!
- </p>
- <div class="buttons">
-  <a class="btn" href="https://discord.com/" target="_blank">DOŁĄCZ NA DISCORD</a>
- </div>
- <p class="muted" style="font-size:12px;margin-top:25px">
-  FiveM Roleplay • Qbox Framework
- </p>
-</section>
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
 
-<footer>
- <div>✦ NIGHTFALL ROLEPLAY</div>
- <div>© 2026 NIGHTFALL RP. Wszystkie prawa zastrzeżone.</div>
- <div>POWERED BY QBOX</div>
-</footer>
-</div>
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(9,7,17,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: Orbitron, sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    .logo span { color: var(--purple); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .nav-links a:hover { color: white; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--purple), var(--purple2));
+      color: white;
+      font-weight: 800;
+      font-size: 13px;
+      border: 1px solid transparent;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(168,85,247,.3);
+    }
+
+    .button-outline {
+      background: transparent;
+      border-color: var(--purple);
+    }
+
+    .hero {
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 45%, rgba(124,58,237,.25), transparent 55%),
+        linear-gradient(180deg, #0c0915, #090711);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .12;
+      background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 45px 45px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .eyebrow {
+      color: #c084fc;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Orbitron, sans-serif;
+      font-size: clamp(38px, 8vw, 78px);
+      line-height: 1.12;
+      letter-spacing: 2px;
+      text-shadow: 0 0 35px rgba(168,85,247,.3);
+    }
+
+    h1 span { color: var(--purple); }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 22px auto 30px;
+      font-size: 16px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .section { padding: 90px 0; }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      font-family: Orbitron, sans-serif;
+      font-size: clamp(25px, 4vw, 36px);
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 span { color: var(--purple); }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, var(--panel2), var(--panel));
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 26px;
+      transition: .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--purple);
+      box-shadow: 0 12px 35px rgba(124,58,237,.12);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(168,85,247,.13);
+      color: #c084fc;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 { margin-bottom: 9px; font-size: 18px; }
+    .card p { color: var(--muted); font-size: 13px; }
+
+    .shop-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+    }
+
+    .shop-card .button {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
+    .price {
+      color: #c084fc;
+      font-weight: 800;
+      font-size: 22px;
+      margin: 15px 0;
+    }
+
+    .staff-card { text-align: center; }
+
+    .avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #a855f7, #4c1d95);
+      font-family: Orbitron, sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+    }
+
+    .rank {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      color: #d8b4fe;
+      background: rgba(168,85,247,.13);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .status-box {
+      max-width: 760px;
+      margin: auto;
+      background: linear-gradient(145deg, #1b1529, #100d19);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 32px;
+    }
+
+    .status-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .status-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+    }
+
+    .status-dot {
+      width: 11px;
+      height: 11px;
+      background: #888;
+      border-radius: 50%;
+      box-shadow: 0 0 12px currentColor;
+    }
+
+    .status-dot.online { background: #22c55e; }
+    .status-dot.offline { background: #ef4444; }
+
+    .status-value {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .status-item {
+      background: rgba(255,255,255,.035);
+      padding: 17px;
+      border-radius: 9px;
+    }
+
+    .status-item small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .status-item strong { font-size: 17px; }
+
+    .status-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .rules-list {
+      max-width: 760px;
+      margin: auto;
+      display: grid;
+      gap: 12px;
+    }
+
+    .rule {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 17px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .rule strong { color: white; }
+
+    .join {
+      text-align: center;
+      background: radial-gradient(ellipse at center, rgba(124,58,237,.2), transparent 65%);
+    }
+
+    .join h2 {
+      font-family: Orbitron, sans-serif;
+      font-size: clamp(25px, 5vw, 40px);
+      margin-bottom: 15px;
+    }
+
+    .join p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    footer {
+      padding: 27px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer strong { color: #c084fc; }
+
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .grid { grid-template-columns: 1fr; }
+      .hero { min-height: 570px; }
+      .section { padding: 65px 0; }
+      .status-box { padding: 22px; }
+    }
+
+    @media (max-width: 420px) {
+      .status-details { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAWIGACJA -->
+  <header class="topbar">
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">NIGHTFALL<span>.</span></a>
+
+        <div class="nav-links">
+          <a href="#about">O SERWERZE</a>
+          <a href="#shop">SKLEP</a>
+          <a href="#staff">ADMINISTRACJA</a>
+          <a href="#status">STATUS</a>
+          <a href="#rules">ZASADY</a>
+        </div>
+
+        <a class="button" href="https://discord.gg/Mjj7eZb8P" target="_blank" rel="noopener">
+          DISCORD
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="eyebrow">FiveM Roleplay Community</div>
+        <h1>NIGHTFALL<br><span>ROLEPLAY</span></h1>
+        <p>
+          Twoja historia. Twoje decyzje. Twoje miasto.
+          Dołącz do NIGHTFALL ROLEPLAY i stwórz własną historię na ulicach Los Santos.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button" href="https://discord.gg/Mjj7eZb8P" target="_blank" rel="noopener">
+            DOŁĄCZ NA DISCORD
+          </a>
+          <a class="button button-outline" href="#status">
+            STATUS SERWERA
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- O SERWERZE -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Poznaj nas</div>
+          <h2>O <span>SERWERZE</span></h2>
+          <p>Wejdź do świata, w którym każda decyzja ma znaczenie.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="card-icon">🎭</div>
+            <h3>Realistyczne RP</h3>
+            <p>Rozwijaj swoją postać, podejmuj decyzje i twórz niezapomniane historie.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🚘</div>
+            <h3>Rozbudowane miasto</h3>
+            <p>Odkrywaj możliwości miasta, poznawaj ludzi i rozwijaj swoją karierę.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">👥</div>
+            <h3>Aktywna społeczność</h3>
+            <p>Dołącz do społeczności NIGHTFALL ROLEPLAY i poznaj innych graczy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKLEP -->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Wsparcie projektu</div>
+          <h2>SKLEP <span>SERWERA</span></h2>
+          <p>Oferta sklepu zostanie uzupełniona.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card shop-card">
+            <div class="card-icon">⭐</div>
+            <h3>Pakiet VIP</h3>
+            <p>Opis pakietu VIP do uzupełnienia.</p>
+            <div class="price">Do ustalenia</div>
+            <a class="button button-outline shop-link" href="https://discord.gg/Mjj7eZb8P">
+              ZAPYTAJ NA DISCORDZIE
+            </a>
+          </div>
+
+          <div class="card shop-card">
+            <div class="card-icon">🚗</div>
+            <h3>Pakiet pojazdów</h3>
+            <p>Opis pakietu pojazdów do uzupełnienia.</p>
+            <div class="price">Do ustalenia</div>
+            <a class="button button-outline shop-link" href="https://discord.gg/Mjj7eZb8P">
+              ZAPYTAJ NA DISCORDZIE
+            </a>
+          </div>
+
+          <div class="card shop-card">
+            <div class="card-icon">💎</div>
+            <h3>Pakiet premium</h3>
+            <p>Opis pakietu premium do uzupełnienia.</p>
+            <div class="price">Do ustalenia</div>
+            <a class="button button-outline shop-link" href="https://discord.gg/Mjj7eZb8P">
+              ZAPYTAJ NA DISCORDZIE
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMINISTRACJA -->
+    <section class="section" id="staff">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Nasz zespół</div>
+          <h2>ADMINI<span>STRACJA</span></h2>
+          <p>Poznaj osoby odpowiedzialne za rozwój serwera.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card staff-card">
+            <div class="avatar">O</div>
+            <h3>Do uzupełnienia</h3>
+            <p>Właściciel projektu</p>
+            <span class="rank">OWNER</span>
+          </div>
+
+          <div class="card staff-card">
+            <div class="avatar">H</div>
+            <h3>Do uzupełnienia</h3>
+            <p>Główny administrator</p>
+            <span class="rank">HEAD ADMIN</span>
+          </div>
+
+          <div class="card staff-card">
+            <div class="avatar">A</div>
+            <h3>Do uzupełnienia</h3>
+            <p>Administrator serwera</p>
+            <span class="rank">ADMIN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATUS -->
+    <section class="section" id="status">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Informacje na żywo</div>
+          <h2>STATUS <span>SERWERA</span></h2>
+          <p>Sprawdź dostępność NIGHTFALL ROLEPLAY.</p>
+        </div>
+
+        <div class="status-box">
+          <div class="status-top">
+            <div class="status-label">
+              <span class="status-dot" id="statusDot"></span>
+              <span id="statusText">OCZEKUJE NA KONFIGURACJĘ</span>
+            </div>
+            <span class="status-value" id="lastCheck">Status nie został jeszcze sprawdzony</span>
+          </div>
+
+          <div class="status-details">
+            <div class="status-item">
+              <small>GRACZE</small>
+              <strong id="players">— / —</strong>
+            </div>
+
+            <div class="status-item">
+              <small>ADRES SERWERA</small>
+              <strong id="serverAddress">Do uzupełnienia</strong>
+            </div>
+          </div>
+
+          <div class="status-actions">
+            <a class="button" id="connectButton" href="https://discord.gg/Mjj7eZb8P">
+              DOŁĄCZ NA DISCORD
+            </a>
+            <a class="button button-outline" href="https://discord.gg/Mjj7eZb8P" target="_blank" rel="noopener">
+              WIĘCEJ INFORMACJI
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZASADY -->
+    <section class="section" id="rules">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Zanim dołączysz</div>
+          <h2>ZASADY <span>SERWERA</span></h2>
+          <p>Dbaj o dobrą atmosferę i jakość rozgrywki.</p>
+        </div>
+
+        <div class="rules-list">
+          <div class="rule"><strong>01.</strong> Szanuj innych graczy i członków administracji.</div>
+          <div class="rule"><strong>02.</strong> Przestrzegaj zasad Roleplay.</div>
+          <div class="rule"><strong>03.</strong> Nie wykorzystuj błędów i luk serwera.</div>
+          <div class="rule"><strong>04.</strong> Nie używaj niedozwolonych modyfikacji.</div>
+          <div class="rule"><strong>05.</strong> Zapoznaj się z pełnym regulaminem na Discordzie.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCORD -->
+    <section class="section join">
+      <div class="container">
+        <div class="eyebrow">Twoja historia zaczyna się tutaj</div>
+        <h2>DOŁĄCZ DO <span style="color:#a855f7">NIGHTFALL</span></h2>
+        <p>Wejdź na naszego Discorda i poznaj społeczność.</p>
+        <a class="button" href="https://discord.gg/Mjj7eZb8P" target="_blank" rel="noopener">
+          DOŁĄCZ NA DISCORD
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> <strong>NIGHTFALL ROLEPLAY</strong>. Wszystkie prawa zastrzeżone.
+      <br>Projekt społeczności FiveM. Nie jest powiązany z Rockstar Games.
+    </div>
+  </footer>
+
+  <script>
+    // ==========================================
+    // KONFIGURACJA STRONY NIGHTFALL ROLEPLAY
+    // ==========================================
+
+    const CONFIG = {
+      // Wpisz tutaj publiczny adres IP serwera.
+      SERVER_IP: "",
+
+      // Domyślny port FiveM. Zmień, jeśli używasz innego.
+      SERVER_PORT: "30120",
+
+      // Opcjonalny kod serwera Cfx.re, jeśli go posiadasz.
+      // Przykład: abc123
+      CFX_SERVER_CODE: ""
+    };
+
+    // ==========================================
+    // AUTOMATYCZNY STATUS SERWERA
+    // ==========================================
+
+    const statusText = document.getElementById("statusText");
+    const statusDot = document.getElementById("statusDot");
+    const players = document.getElementById("players");
+    const serverAddress = document.getElementById("serverAddress");
+    const connectButton = document.getElementById("connectButton");
+    const lastCheck = document.getElementById("lastCheck");
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function setStatus(text, state, playerCount = "— / —") {
+      statusText.textContent = text;
+      statusDot.className = "status-dot " + state;
+      players.textContent = playerCount;
+      lastCheck.textContent = "Ostatnie sprawdzenie: " +
+        new Date().toLocaleTimeString("pl-PL");
+    }
+
+    async function checkServerStatus() {
+      if (!CONFIG.CFX_SERVER_CODE) {
+        setStatus("OCZEKUJE NA KONFIGURACJĘ", "", "— / —");
+        serverAddress.textContent = CONFIG.SERVER_IP
+          ? CONFIG.SERVER_IP + ":" + CONFIG.SERVER_PORT
+          : "Do uzupełnienia";
+        return;
+      }
+
+      setStatus("SPRAWDZANIE...", "", "— / —");
+
+      try {
+        const response = await fetch(
+          "https://servers-frontend.fivem.net/api/servers/single/" +
+          encodeURIComponent(CONFIG.CFX_SERVER_CODE),
+          { cache: "no-store" }
+        );
+
+        if (!response.ok) throw new Error("Nie udało się pobrać statusu");
+
+        const result = await response.json();
+        const data = result.Data;
+
+        if (!data) throw new Error("Brak danych serwera");
+
+        const currentPlayers = data.clients ?? 0;
+        const maxPlayers = data.sv_maxclients ?? "?";
+
+        setStatus("SERWER ONLINE", "online",
+          currentPlayers + " / " + maxPlayers);
+
+        serverAddress.textContent = CONFIG.SERVER_IP
+          ? CONFIG.SERVER_IP + ":" + CONFIG.SERVER_PORT
+          : "Adres ukryty / niepodany";
+
+      } catch (error) {
+        setStatus("SERWER OFFLINE LUB BRAK DANYCH", "offline", "— / —");
+      }
+    }
+
+    if (CONFIG.SERVER_IP) {
+      serverAddress.textContent =
+        CONFIG.SERVER_IP + ":" + CONFIG.SERVER_PORT;
+
+      connectButton.href =
+        "fivem://connect/" + CONFIG.SERVER_IP + ":" + CONFIG.SERVER_PORT;
+
+      connectButton.textContent = "POŁĄCZ Z SERWEREM";
+    }
+
+    checkServerStatus();
+
+    if (CONFIG.CFX_SERVER_CODE) {
+      setInterval(checkServerStatus, 60000);
+    }
+  </script>
+
+</body>
+</html>
+
