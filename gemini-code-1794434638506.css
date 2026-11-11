@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+/* Opcjonalny import czcionki GTA */
+@font-style;
+@font-face {
+    font-family: 'Pricedown';
+    src: url('https://fonts.cdnfonts.com/s/14842/pricedown%20bl.woff') format('woff');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #0b0c10 url('https://images.wallpaperscraft.com/image/single/gta_5_grand_theft_auto_v_rockstar_games_96825_1920x1080.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Ciemna nakładka dla lepszego kontrastu tekstów */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 12, 18, 0.85);
+    z-index: -1;
+}
+
+header {
+    background: rgba(18, 20, 29, 0.95);
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #f39c12;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+    font-family: 'Pricedown', 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: #fff;
+    text-shadow: 2px 2px 0px #f39c12;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #f39c12;
+    text-shadow: 0 0 10px rgba(243, 156, 18, 0.5);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+h2 {
+    font-family: 'Pricedown', sans-serif;
+    font-size: 2.5rem;
+    color: #f39c12;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Hero Banner */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, rgba(243, 156, 18, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 15px;
+    margin-bottom: 2.5rem;
+    border: 1px solid rgba(243, 156, 18, 0.2);
+}
+
+.hero h1 {
+    font-family: 'Pricedown', sans-serif;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+/* Status Serwera FiveM */
+.server-status-card {
+    background: rgba(20, 24, 36, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    border: 1px solid #2a2f45;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.connect-btn {
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    font-weight: 900;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    transition: 0.3s;
+}
+
+.connect-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.status-online { background: #27ae60; color: #fff; box-shadow: 0 0 10px rgba(39, 174, 96, 0.4); }
+.status-offline { background: #c0392b; color: #fff; }
+
+/* Sklep z kartami VIP */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: rgba(20, 24, 36, 0.9);
+    border: 1px solid #2a2f45;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    border-color: #f39c12;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(243, 156, 18, 0.2);
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #fff;
+}
+
+.product-card p {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-card .price {
+    font-size: 1.8rem;
+    color: #f39c12;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+}
+
+button {
+    background: #f39c12;
+    color: #000;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background: #e67e22;
+    color: #fff;
+}
+
+/* Tabele i Formularze dla Admina */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: rgba(20, 24, 36, 0.9);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #2a2f45;
+}
+
+th {
+    background: #12141d;
+    color: #f39c12;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background: #12141d;
+    border: 1px solid #2a2f45;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #f39c12;
+}

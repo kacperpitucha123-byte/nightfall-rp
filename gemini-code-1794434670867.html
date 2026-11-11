@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarządzanie Serwerem FiveM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">ADMIN PANEL</div>
+        <nav>
+            <a href="index.html">Strona Główna</a>
+            <a href="admin.html" class="active">Panel Admina</a>
+        </nav>
+    </header>
+
+    <div class="container" id="login-section" style="max-width: 450px;">
+        <h2>Dostęp do Panelu</h2>
+        <input type="password" id="admin-pass" placeholder="Wprowadź hasło zarządu">
+        <button onclick="login()">Zaloguj się</button>
+    </div>
+
+    <div class="container" id="admin-content" style="display: none;">
+        <h2>Zarządzanie Sklepem i Pakietami</h2>
+        <br>
+        
+        <h3>Dodaj Nową Usługę / Pakiet</h3>
+        <br>
+        <input type="text" id="prod-name" placeholder="Nazwa pakietu (np. Pojazd Custom)">
+        <input type="number" step="0.01" id="prod-price" placeholder="Cena w PLN">
+        <input type="text" id="prod-desc" placeholder="Krótki opis przywilejów">
+        <button onclick="addProduct()">Dodaj pakiet do sklepu</button>
+
+        <br><br><hr style="border-color: #2a2f45;"><br>
+
+        <h3>Zgłoszenia Zamówień (Wpłaty)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Nick Steam / ID</th>
+                    <th>Wybrany Pakiet</th>
+                    <th>Kwota</th>
+                </tr>
+            </thead>
+            <tbody id="orders-list">
+            </tbody>
+        </table>
+        <br>
+        <button onclick="clearOrders()" style="background: #c0392b; color: white;">Wyczyść listę zamówień</button>
+    </div>
+
+    <script>
+        const ADMIN_PASSWORD = "fivem123"; // Hasło administracyjne
+
+        function login() {
+            const pass = document.getElementById('admin-pass').value;
+            if (pass === ADMIN_PASSWORD) {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('admin-content').style.display = 'block';
+                loadOrders();
+            } else {
+                alert('Błędne hasło dostępowe!');
+            }
+        }
+
+        function addProduct() {
+            const name = document.getElementById('prod-name').value;
+            const price = parseFloat(document.getElementById('prod-price').value);
+            const desc = document.getElementById('prod-desc').value;
+
+            if (!name || isNaN(price)) {
+                alert('Podaj prawidłową nazwę oraz cenę!');
+                return;
+            }
+
+            const defaultProducts = [
+                { id: 1, name: "Pakiet VIP (30 Dni)", price: 20.00, desc: "Dedykowany garaż VIP, dostęp do priorytetu w kolejce." },
+                { id: 2, name: "Własna Rejestracja", price: 15.00, desc: "Unikalny napis na tablicy rejestracyjnej." }
+            ];
+
+            const products = JSON.parse(localStorage.getItem('products')) || defaultProducts;
+            products.push({ id: Date.now(), name, price, desc });
+            localStorage.setItem('products', JSON.stringify(products));
+
+            alert('Nowy pakiet został pomyślnie dodany!');
+            document.getElementById('prod-name').value = '';
+            document.getElementById('prod-price').value = '';
+            document.getElementById('prod-desc').value = '';
+        }
+
+        function loadOrders() {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const tbody = document.getElementById('orders-list');
+            tbody.innerHTML = '';
+
+            orders.reverse().forEach(order => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${order.date}</td>
+                        <td><b style="color:#f39c12">${order.nick}</b></td>
+                        <td>${order.item}</td>
+                        <td>${order.price.toFixed(2)} PLN</td>
+                    </tr>
+                `;
+            });
+        }
+
+        function clearOrders() {
+            if (confirm("Usunąć całą historię zgłoszeń?")) {
+                localStorage.removeItem('orders');
+                loadOrders();
+            }
+        }
+    </script>
+</body>
+</html>
