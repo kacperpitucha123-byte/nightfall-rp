@@ -1,0 +1,194 @@
+
+<div id="nightfall">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600;700;800&display=swap');
+
+#nightfall {
+  --purple:#a855f7;
+  --bright:#c084fc;
+  --bg:#09070e;
+  color:#fff;
+  background:#09070e;
+  font-family:Inter,sans-serif;
+  width:100%;
+  overflow:hidden;
+}
+#nightfall * {box-sizing:border-box}
+#nightfall a {color:inherit;text-decoration:none}
+#nightfall .nav {
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px 7%;background:#0b0812;
+  border-bottom:1px solid #382047;
+  flex-wrap:wrap;gap:15px;
+}
+#nightfall .logo {
+  font-family:Orbitron,sans-serif;font-weight:900;
+  font-size:20px;color:#c084fc;letter-spacing:2px;
+}
+#nightfall .links {display:flex;gap:25px;flex-wrap:wrap;font-size:13px;color:#c8bed2}
+#nightfall .links a:hover {color:#c084fc}
+#nightfall .hero {
+  min-height:610px;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  padding:90px 20px;
+  background:
+  radial-gradient(ellipse at 50% 70%,#7024a955,transparent 55%),
+  linear-gradient(180deg,#100a19,#09070e);
+  position:relative;
+}
+#nightfall .tag {
+  border:1px solid #a855f766;color:#d8b4fe;
+  padding:9px 18px;border-radius:30px;
+  font-size:11px;letter-spacing:3px;
+}
+#nightfall h1 {
+  font-family:Orbitron,sans-serif;
+  font-size:clamp(38px,8vw,85px);
+  line-height:1.12;margin:25px 0 15px;
+  letter-spacing:-3px;
+  text-shadow:0 0 35px #a855f777;
+}
+#nightfall h1 span {color:#bd75ff}
+#nightfall .intro {color:#b9adca;max-width:580px;line-height:1.8;font-size:15px}
+#nightfall .buttons {display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;justify-content:center}
+#nightfall .btn {
+  padding:16px 27px;border-radius:5px;
+  background:#a855f7;color:white;font-weight:800;
+  font-size:12px;letter-spacing:1px;
+  box-shadow:0 0 25px #a855f744;
+  display:inline-block;
+}
+#nightfall .btn.secondary {background:transparent;border:1px solid #a855f7}
+#nightfall .section {padding:85px 8%;text-align:center}
+#nightfall .eyebrow {color:#b76cff;font-size:11px;letter-spacing:4px;font-weight:800}
+#nightfall h2 {font-family:Orbitron,sans-serif;font-size:clamp(25px,4vw,38px);margin:15px 0}
+#nightfall .description {color:#a99db5;max-width:650px;margin:0 auto;line-height:1.8}
+#nightfall .cards {
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:18px;margin-top:40px;text-align:left;
+}
+#nightfall .card {
+ padding:28px;background:linear-gradient(145deg,#1b1125,#100c16);
+ border:1px solid #432454;border-radius:9px;
+ transition:.25s;
+}
+#nightfall .card:hover {transform:translateY(-5px);border-color:#b66aff}
+#nightfall .icon {font-size:27px;margin-bottom:18px}
+#nightfall .card h3 {font-family:Orbitron,sans-serif;font-size:16px}
+#nightfall .card p {color:#a99db5;font-size:13px;line-height:1.8}
+#nightfall .dark {background:#100b17}
+#nightfall .join {
+ margin:30px 8%;padding:65px 20px;text-align:center;
+ border:1px solid #7735a5;border-radius:12px;
+ background:radial-gradient(ellipse at center,#62239455,#160d20);
+}
+#nightfall footer {
+ padding:30px 8%;border-top:1px solid #382047;
+ display:flex;justify-content:space-between;gap:15px;
+ flex-wrap:wrap;color:#8e8299;font-size:12px;
+}
+#nightfall .muted {color:#998ba8}
+@media(max-width:600px) {
+ #nightfall .nav {justify-content:center}
+ #nightfall .links {justify-content:center;gap:14px}
+ #nightfall .hero {min-height:540px}
+ #nightfall .section {padding:65px 6%}
+ #nightfall footer {justify-content:center;text-align:center}
+}
+</style>
+
+<nav class="nav">
+ <div class="logo">✦ NIGHTFALL RP</div>
+ <div class="links">
+  <a href="#home">HOME</a>
+  <a href="#about">O NAS</a>
+  <a href="#features">ROZGRYWKA</a>
+  <a href="#rules">REGULAMIN</a>
+  <a href="#join">DOŁĄCZ</a>
+ </div>
+</nav>
+
+<header class="hero" id="home">
+ <div class="tag">POLSKI SERWER ROLEPLAY</div>
+ <h1>YOUR CITY.<br><span>YOUR STORY.</span></h1>
+ <p class="intro">
+  Wejdź do świata, w którym każda decyzja ma znaczenie.
+  Stwórz własną historię, poznaj nowych ludzi i zostań częścią
+  wyjątkowej społeczności roleplay.
+ </p>
+ <div class="buttons">
+  <a class="btn" href="#join">DOŁĄCZ DO NAS</a>
+  <a class="btn secondary" href="https://discord.com/" target="_blank">DISCORD</a>
+ </div>
+</header>
+
+<section class="section" id="about">
+ <div class="eyebrow">POZNAJ NAS</div>
+ <h2>WIĘCEJ NIŻ GRA</h2>
+ <p class="description">
+  NIGHTFALL ROLEPLAY to projekt stworzony z myślą o graczach,
+  którzy cenią dobrą atmosferę, realistyczną rozgrywkę
+  i niezapomniane historie.
+ </p>
+</section>
+
+<section class="section dark" id="features">
+ <div class="eyebrow">MOŻLIWOŚCI</div>
+ <h2>CO NA CIEBIE CZEKA?</h2>
+ <div class="cards">
+  <div class="card">
+   <div class="icon">🚔</div>
+   <h3>FRAKCJE</h3>
+   <p>Dołącz do służb publicznych i zadbaj o bezpieczeństwo miasta.</p>
+  </div>
+  <div class="card">
+   <div class="icon">💼</div>
+   <h3>PRACA</h3>
+   <p>Rozwijaj swoją karierę i buduj własną przyszłość.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🏎️</div>
+   <h3>MOTORYZACJA</h3>
+   <p>Odkrywaj świat samochodów i rozwijaj swoje motoryzacyjne pasje.</p>
+  </div>
+  <div class="card">
+   <div class="icon">👥</div>
+   <h3>SPOŁECZNOŚĆ</h3>
+   <p>Poznaj innych graczy i twórz własne historie.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="rules">
+ <div class="eyebrow">ZASADY ROZGRYWKI</div>
+ <h2>FAIR PLAY</h2>
+ <p class="description">
+  Szanuj innych graczy, przestrzegaj zasad Roleplay
+  i pamiętaj, że dobra zabawa zaczyna się od wzajemnego szacunku.
+ </p>
+ <div class="buttons">
+  <a class="btn secondary" href="https://discord.com/">POZNAJ REGULAMIN</a>
+ </div>
+</section>
+
+<section class="join" id="join">
+ <div class="eyebrow">TWOJA HISTORIA ZACZYNA SIĘ TUTAJ</div>
+ <h2>DOŁĄCZ DO NIGHTFALL</h2>
+ <p class="description">
+  Czekamy na Ciebie. Wejdź na naszego Discorda
+  i poznaj naszą społeczność!
+ </p>
+ <div class="buttons">
+  <a class="btn" href="https://discord.com/" target="_blank">DOŁĄCZ NA DISCORD</a>
+ </div>
+ <p class="muted" style="font-size:12px;margin-top:25px">
+  FiveM Roleplay • Qbox Framework
+ </p>
+</section>
+
+<footer>
+ <div>✦ NIGHTFALL ROLEPLAY</div>
+ <div>© 2026 NIGHTFALL RP. Wszystkie prawa zastrzeżone.</div>
+ <div>POWERED BY QBOX</div>
+</footer>
+</div>
